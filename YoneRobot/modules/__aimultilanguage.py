@@ -55,7 +55,7 @@ async def hmm(_, message):
         message.continue_propagation()
     status = message.text.split(None, 1)[1]
     chat_id = message.chat.id
-    if status == "ON" or status == "on" or status == "On":
+    if status in ["ON", "on", "On"]:
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
@@ -65,7 +65,7 @@ async def hmm(_, message):
             f"yone AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
-    elif status == "OFF" or status == "off" or status == "Off":
+    elif status in ["OFF", "off", "Off"]:
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
@@ -75,8 +75,8 @@ async def hmm(_, message):
             f"yone AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
-    elif status == "EN" or status == "en" or status == "english":
-        if not chat_id in en_chats:
+    elif status in ["EN", "en", "english"]:
+        if chat_id not in en_chats:
             en_chats.append(chat_id)
             await message.reply_text("English AI chat Enabled!")
             return
@@ -129,12 +129,6 @@ async def hmm(client, message):
             return
 
         pro = result["message"]
-        try:
-            await Yone.send_chat_action(message.chat.id, "typing")
-            await message.reply_text(pro)
-        except CFError:
-            return
-
     else:
         u = msg.split()
         emj = extract_emojis(msg)
@@ -169,7 +163,7 @@ async def hmm(client, message):
         except:
             return
         test = rm
-        if not "en" in lan and not lan == "":
+        if "en" not in lan and lan != "":
             try:
                 test = translator.translate(test, lang_tgt="en")
             except:
@@ -190,16 +184,16 @@ async def hmm(client, message):
         except:
             return
         pro = result["message"]
-        if not "en" in lan and not lan == "":
+        if "en" not in lan and lan != "":
             try:
                 pro = translator.translate(pro, lang_tgt=lan[0])
             except:
                 return
-        try:
-            await Yone.send_chat_action(message.chat.id, "typing")
-            await message.reply_text(pro)
-        except CFError:
-            return
+    try:
+        await Yone.send_chat_action(message.chat.id, "typing")
+        await message.reply_text(pro)
+    except CFError:
+        return
 
 
 @Yone.on_message(
@@ -242,7 +236,7 @@ async def inuka(client, message):
     except:
         return
     test = rm
-    if not "en" in lan and not lan == "":
+    if "en" not in lan and lan != "":
         try:
             test = translator.translate(test, lang_tgt="en")
         except:
@@ -265,7 +259,7 @@ async def inuka(client, message):
         return
 
     pro = result["message"]
-    if not "en" in lan and not lan == "":
+    if "en" not in lan and lan != "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
         await Yone.send_chat_action(message.chat.id, "typing")
@@ -320,7 +314,7 @@ async def inuka(client, message):
     except:
         return
     test = rm
-    if not "en" in lan and not lan == "":
+    if "en" not in lan and lan != "":
         try:
             test = translator.translate(test, lang_tgt="en")
         except:
@@ -342,7 +336,7 @@ async def inuka(client, message):
     except:
         return
     pro = result["message"]
-    if not "en" in lan and not lan == "":
+    if "en" not in lan and lan != "":
         try:
             pro = translator.translate(pro, lang_tgt=lan[0])
         except Exception:
