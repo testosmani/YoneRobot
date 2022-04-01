@@ -74,14 +74,18 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-ʜᴇʟʟᴏ [🤗](https://telegra.ph/file/ebf62ff4c5668adcfa28c.jpg), ɪᴍ ʏᴏɴᴇ ᴀ ʜɪɢʜʏ ᴀᴅᴠᴀɴᴄᴇᴅ ʙᴏᴛ ᴡɪᴛʜ ʟᴏᴛꜱ ᴏꜰ ᴀᴍᴀᴢɪɴɢ ᴛᴏᴏʟꜱ.
-`ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ` /help   
+👋Sᴀʟᴀᴍᴀ [🤗](https://telegra.ph/file/f4be750f40e7d85823a78.jpg),  Waxaan Ahay OsmaniChatbot Caawiyaha Groups ka. 
+• ────── ✾ ────── •
+😎 Sɪ ᴀᴀɴ Kᴜᴜ ᴄᴀᴀᴡɪʏᴏ Uɢᴜ Cᴀsᴜᴜᴍ Gʀᴏᴜᴘ ᴋᴀᴀɢᴀ Iɪɴᴀ Dʜɪɪʙ 
+Mᴀᴀᴍᴜʟᴋᴀ Gʀᴏᴜᴘ Qᴇʏʙ Kᴀ ᴍɪᴅ ᴀʜ
+• ────── ✾ ────── •
+✪ Ku dhufo /help si aad u aragto amarradayda diyaarsan.
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ʏᴏɴᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/Yone_Robot?startgroup=true"),
+            text="➕️ ᴀᴅᴅ ʏᴏɴᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/Mss_Rosan_Bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="yone_"),
@@ -96,15 +100,15 @@ buttons = [
 
 
 HELP_STRINGS = """
-`ʜɪ.. ɪ'ᴍ` [yone🙋‍♀️](https://telegra.ph/file/082096b101615e33eaf19.jpg) 
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`"""
+`ʜɪ.. ɪ'ᴍ` [Rosan🙋‍♀️](https://telegra.ph/file/eb89fecd86d300697f0f0.jpg) 
+Guji badhanka hoose si aad u hesho sharaxaad ku saabsan amarka gaarka ah..`"""
 
-yone_IMG = "https://telegra.ph/file/7e61fe06a9c02747249c4.jpg"
+yone_IMG = "https://telegra.ph/file/1d38e2291d525abd2e272.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paypal](#) or by contacting @kittu5588 \
+DONATE_STRING = """Hey, ku faraxsanahay inaan maqlo inaad rabto inaad wax ku Tabarucdo!
+ Waxaad ku taageeri kartaa mashruuca contactin By @ribajosmani \
  Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+ Kuwa aan bixin karin taageero lacageed waa lagu soo dhaweynayaa inay naga caawiyaan horumarinta bot-ka ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -349,15 +353,15 @@ def yone_about_callback(update, context):
     query = update.callback_query
     if query.data == "yone_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *yone*, a powerful group management bot built to help you manage your group easily.
+            text=""" ℹ️ I'm *Rosan*, a powerful group management bot built to help you manage your group easily.
                  \n❍ I can restrict users.
                  \n❍ I can greet users with customizable welcome messages and even set a group's rules.
                  \n❍ I have an advanced anti-flood system.
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n\n_yone's licensed under the GNU General Public License v3.0_
-                 \nHere is the [💾Repository](https://github.com/noob-kittu/YoneRobot).
+                 \n\n_rosan's licensed under the GNU General Public License v3.0_
+                 \nHere is the [✨Owner](t.me/ribajosmani).
                  \n\nIf you have any question about yone, let us know at .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -384,8 +388,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *yone*
-                 \nHere is the [Source Code](https://github.com/Noob-kittu/YoneRobot) .""",
+            text=""" Hi..🤗 I'm *Rosan*
+                 \nHere is the [Source Code](https://github.com/Ribaj) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -670,7 +674,7 @@ def migrate_chats(update: Update, context: CallbackContext):
     for mod in MIGRATEABLE:
         mod.__migrate__(old_chat, new_chat)
 
-    LOGGER.info("Successfully migrated!")
+    LOGGER.info("Successfully Rosan!")
     raise DispatcherHandlerStop
 
 
